@@ -22,9 +22,12 @@ function App() {
 				</ul>
 			</nav>
 			<Routes>
-				<Route path='/' element={<Dashboard stocks={stocks} />} />
-				<Route path='/stocks' element={<Dashboard stocks={stocks} />} />
-				<Route path='/about' element={<About />} />
+				<Route path='/react-stocks' element={<Dashboard stocks={stocks} />} />
+				<Route
+					path='/react-stocks/stocks'
+					element={<Dashboard stocks={stocks} />}
+				/>
+				<Route path='/react-stocks/about' element={<About />} />
 				<Route
 					path='/stocks/:symbol'
 					element={<StockDetails stocks={stocks} />}
