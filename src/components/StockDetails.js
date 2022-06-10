@@ -1,7 +1,20 @@
-import React from "react";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 
-function StockDetails(props) {
-  return <div>Stock Details</div>;
+function StockDetails({ stocks }) {
+	const { symbol } = useParams();
+	let stockObj = stocks.find((stock) => stock.symbol === symbol);
+	return (
+		<ul>
+			<li>Name: {stockObj.name}</li>
+			<li>Symbol: {stockObj.symbol}</li>
+			<li>Last Price: {stockObj.lastPrice}</li>
+			<li>High: {stockObj.high}</li>
+			<li>Low: {stockObj.low}</li>
+			<li>Open: {stockObj.open}</li>
+			<li>Change: {stockObj.change}</li>
+		</ul>
+	);
 }
 
 export default StockDetails;
