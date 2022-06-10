@@ -11,7 +11,6 @@ function App() {
 	const [stocks, setStocks] = useState(stockData);
 	return (
 		<div className='App'>
-			<h1>App</h1>
 			<nav>
 				<ul>
 					<li>
@@ -23,7 +22,7 @@ function App() {
 				</ul>
 			</nav>
 			<Routes>
-				<Route path='' element={<Dashboard stocks={stocks} />} />
+				<Route path='/' element={<Dashboard stocks={stocks} />} />
 				<Route path='/stocks' element={<Dashboard stocks={stocks} />} />
 				<Route path='/about' element={<About />} />
 				<Route
