@@ -29,7 +29,7 @@ function App() {
 				/>
 				<Route path='/react-stocks/about' element={<About />} />
 				<Route
-					path='/stocks/:symbol'
+					path='/react-stocks/stocks/:symbol'
 					element={<StockDetails stocks={stocks} />}
 				/>
 			</Routes>
