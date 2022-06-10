@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function StockDetails({ stocks }) {
 	const [stock, setStock] = useState(null);
@@ -9,10 +10,10 @@ function StockDetails({ stocks }) {
 	useEffect(() => {
 		let url = `https://cloud.iexapis.com/stable/stock/${symbol}/quote?token=${process.env.REACT_APP_IEX_KEY}`;
 
-		fetch(url)
-			.then((res) => res.json())
+		axios
+			.get(url)
 			.then((data) => {
-				setStock(data);
+				setStock(data.data);
 			})
 			.catch(console.error);
 	}, []);
