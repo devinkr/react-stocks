@@ -1,0 +1,4 @@
+-App
+  -Dashboard (State: stocks, setStocks -user clicks home or goes to /stocks)
+    -StockDetails (State: stock setStock /stocks/:symbol)
+  -About
