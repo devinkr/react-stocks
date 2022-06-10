@@ -14,10 +14,10 @@ function App() {
 			<nav>
 				<ul>
 					<li>
-						<Link to='/'>Home</Link>
+						<Link to='/react-stocks/'>Home</Link>
 					</li>
 					<li>
-						<Link to='/about'>About</Link>
+						<Link to='/react-stocks/about'>About</Link>
 					</li>
 				</ul>
 			</nav>
