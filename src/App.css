@@ -5,6 +5,11 @@
 	line-height: 1.7;
 }
 
+.App {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
 nav > ul {
 	display: flex;
 	justify-content: flex-end;
@@ -32,5 +37,7 @@ li {
 }
 
 .list {
-	margin: 2em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
