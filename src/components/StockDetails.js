@@ -25,7 +25,7 @@ function StockDetails({ stocks }) {
 	return (
 		<div className='list'>
 			<ul>
-				<h1>{stock.companyName}</h1>
+				<h2>{stock.companyName}</h2>
 				<li>Symbol: {stock.symbol}</li>
 				<li>Last Price: {stock.lastPrice}</li>
 				<li>High: {stock.high}</li>
