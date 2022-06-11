@@ -9,7 +9,7 @@ function Dashboard({ stocks }) {
 				{stocks.map((stock, index) => {
 					return (
 						<li key={index}>
-							<Link to={`/react-stocks/stocks/${stock.symbol}`}>
+							<Link to={`/stocks/${stock.symbol}`}>
 								{stock.name} - {stock.symbol}
 							</Link>
 						</li>

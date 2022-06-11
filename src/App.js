@@ -14,22 +14,19 @@ function App() {
 			<nav>
 				<ul>
 					<li>
-						<Link to='/react-stocks/'>Home</Link>
+						<Link to='/'>Home</Link>
 					</li>
 					<li>
-						<Link to='/react-stocks/about'>About</Link>
+						<Link to='/about'>About</Link>
 					</li>
 				</ul>
 			</nav>
 			<Routes>
-				<Route path='/react-stocks' element={<Dashboard stocks={stocks} />} />
+				<Route path='/' element={<Dashboard stocks={stocks} />} />
+				<Route path='/stocks' element={<Dashboard stocks={stocks} />} />
+				<Route path='/about' element={<About />} />
 				<Route
-					path='/react-stocks/stocks'
-					element={<Dashboard stocks={stocks} />}
-				/>
-				<Route path='/react-stocks/about' element={<About />} />
-				<Route
-					path='/react-stocks/stocks/:symbol'
+					path='/stocks/:symbol'
 					element={<StockDetails stocks={stocks} />}
 				/>
 			</Routes>
