@@ -11,16 +11,22 @@ function App() {
 	const [stocks, setStocks] = useState(stockData);
 	return (
 		<div className='App'>
-			<nav>
-				<ul>
-					<li>
-						<Link to='/'>Home</Link>
-					</li>
-					<li>
-						<Link to='/about'>About</Link>
-					</li>
-				</ul>
-			</nav>
+			<header>
+				<Link to='/'>
+					<h1>React Stocks</h1>
+				</Link>
+
+				<nav>
+					<ul>
+						<li>
+							<Link to='/'>Home</Link>
+						</li>
+						<li>
+							<Link to='/about'>About</Link>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<Routes>
 				<Route path='/' element={<Dashboard stocks={stocks} />} />
 				<Route path='/stocks' element={<Dashboard stocks={stocks} />} />

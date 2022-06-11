@@ -9,12 +9,21 @@
 	max-width: 900px;
 	margin: 0 auto;
 }
+header {
+	display: flex;
+	justify-content: space-between;
+	background-color: slategray;
+	padding: 1em;
+}
+
+nav {
+	display: flex;
+}
 
 nav > ul {
 	display: flex;
-	justify-content: flex-end;
-	background-color: slategray;
-	padding: 1em;
+	justify-content: center;
+	align-items: center;
 	gap: 1em;
 }
 
