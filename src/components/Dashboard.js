@@ -1,7 +1,11 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Dashboard({ stocks }) {
+function Dashboard({ stocks, title }) {
+	useEffect(() => {
+		document.title = 'Dashboard | React Stocks';
+	}, []);
+
 	return (
 		<div className='list'>
 			<h1>Dashboard</h1>

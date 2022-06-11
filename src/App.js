@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
 import StockDetails from './components/StockDetails';
@@ -28,8 +28,11 @@ function App() {
 				</nav>
 			</header>
 			<Routes>
-				<Route path='/' element={<Dashboard stocks={stocks} />} />
-				<Route path='/stocks' element={<Dashboard stocks={stocks} />} />
+				<Route
+					path='/'
+					element={<Dashboard stocks={stocks} title='DashBoard' />}
+				/>
+				<Route path='/stocks' element={<Navigate to='/' />} />
 				<Route path='/about' element={<About />} />
 				<Route
 					path='/stocks/:symbol'

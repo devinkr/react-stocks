@@ -8,6 +8,7 @@ function StockDetails({ stocks }) {
 	const { symbol } = useParams();
 
 	useEffect(() => {
+		document.title = `${symbol} | React Stocks`;
 		let url = `https://cloud.iexapis.com/stable/stock/${symbol}/quote?token=${process.env.REACT_APP_IEX_KEY}`;
 
 		axios
