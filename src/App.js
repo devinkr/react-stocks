@@ -28,10 +28,7 @@ function App() {
 				</nav>
 			</header>
 			<Routes>
-				<Route
-					path='/'
-					element={<Dashboard stocks={stocks} title='DashBoard' />}
-				/>
+				<Route path='/' element={<Dashboard stocks={stocks} />} />
 				<Route path='/stocks' element={<Navigate to='/' />} />
 				<Route path='/about' element={<About />} />
 				<Route
